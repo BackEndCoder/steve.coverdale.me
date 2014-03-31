@@ -1,3 +1,9 @@
 [submodule "Plugin/Sitemap"]
 	path = Plugin/Sitemap
 	url = git://github.com/loadsys/CakePHP-Sitemap.git
+[submodule "Plugin/ContactUs"]
+	path = Plugin/ContactUs
+	url = https://github.com/davidyell/CakePHP-ContactUs.git
+[submodule "Plugin/Recaptcha"]
+	path = Plugin/Recaptcha
+	url = https://github.com/CakeDC/recaptcha.git
