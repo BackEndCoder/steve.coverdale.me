@@ -72,6 +72,12 @@ Cache::config('default', array('engine' => 'File'));
  *
  */
 
+CakePlugin::load(array('Sitemap' => array('routes' => TRUE, 'bootstrap' => TRUE)));
+CakePlugin::load('ContactUs');
+Configure::write('Recaptcha.publicKey', '6LeR8PASAAAAANK4XPLgcR1jSGa0CtJL3ppIwlid');
+Configure::write('Recaptcha.privateKey', '6LeR8PASAAAAAMg5uWmmIse_1O_vLnt6oADumtCf');
+CakePlugin::load('Recaptcha');
+CakePlugin::load('Migrations');
 /**
  * You can attach event listeners to the request lifecycle as Dispatcher Filter. By default CakePHP bundles two filters:
  *
