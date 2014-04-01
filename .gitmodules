@@ -7,3 +7,6 @@
 [submodule "Plugin/Recaptcha"]
 	path = Plugin/Recaptcha
 	url = https://github.com/CakeDC/recaptcha.git
+[submodule "Plugin/SynbyteDatasources"]
+	path = Plugin/SynbyteDatasources
+	url = https://github.com/BackEndCoder/synbyte-datasources.git
