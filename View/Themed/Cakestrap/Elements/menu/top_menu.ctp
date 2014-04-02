@@ -10,7 +10,7 @@
 	</div><!-- /.navbar-header -->
 	<div class="collapse navbar-collapse navbar-ex1-collapse">
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="/github/">Github</a></li>
+			<li class="active"><a href="<?php echo Router::url(array('plugin'=>null,'controller'=>'github','action'=>'index')); ?>">Github</a></li>
 			<li><a href="https://www.linkedin.com/in/cakephpdevelopment/">Linkedin</a></li>
 			<li><a href="/contact/">Contact</a></li>
 			<li class="dropdown">
