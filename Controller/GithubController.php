@@ -2,31 +2,13 @@
 class GithubController extends AppController {
 
 	public function index() {
-		$conditions = array('conditions'=>array(
-			'type'=>'user_info',
-			'username'=>'BackEndCoder'
-			));
-		$user['info'] = $this->Github->find('all',$conditions);
-
-		debug($user['info']);
-
-		$conditions = array('conditions'=>array(
-			'type'=>'user_repos',
-			'username'=>'BackEndCoder'
-			));
-		$user['repos'] = $this->Github->find('all',$conditions);
-
+		$user['info'] = $this->Github->getUserInfo();
+		$user['repos'] = $this->Github->getUserRepos();
 		foreach($user['repos'] as $data){
 			if($data['fork']!==true){
-				$conditions = array('conditions'=>array(
-					'type'=>'repo',
-					'username'=>'BackEndCoder',
-					'repo'=>$data['name']
-					));
-				$repos[$data['name']] = $this->Github->find('all',$conditions);
+				$repos[$data['name']] = $data;
 			}
 		}
-		debug($repos);
-		debug($user);
+		$this->set(compact('repos','user'));
 	}
 }

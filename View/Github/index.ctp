@@ -1,61 +1,44 @@
+<h1>Github Repos</h1>
+<div class="well">
+    <p><?php echo $user['info']['bio']; ?></p>
+</div>
 <div class="row">
-        
+<?php
+//debug($user);
+//debug($repos);
+//'homepage' => 'steve.coverdale.me',
+//        'size' => (int) 0,
+//       'stargazers_count' => (int) 0,
+//        'watchers_count' => (int) 0,
+//        'language' => 'CSS',
+//        'has_issues' => true,
+//        'has_downloads' => true,
+//        'has_wiki' => true,
+//        'forks_count' => (int) 0,
+//        'mirror_url' => null,
+//        'open_issues_count' => (int) 0,
+//        'forks' => (int) 0,
+//        'open_issues' => (int) 0,
+//        'watchers' => (int) 0,
+//        'default_branch' => 'master',
+//        'master_branch' => 'master'
+//                'html_url' => 'https://github.com/BackEndCoder/ContentManager',
+//        'description' => 'A plugin to run side by side with the default CakePHP PagesController for static pages to provide static pages saved and editable in a database',
+//        'fork' => false,
+//        'id' => (int) 17080956,
+//       'name' => 'ContentManager',
+//        'full_name' => 'BackEndCoder/ContentManager',
+
+
+foreach($repos as $repo):
+?>
             <article class="github-item col-xs-12 col-sm-4">
-                <a href="/github/cakestrap/">
-                    <figure class="github-image">
-                            <img src="/assets/Uploads/_resampled/CroppedImage722722-cake.png" alt="cake">
-                        <span class="hover-icon"><i class="fa fa-plus-square-o"></i></span><!-- /.hover-icon -->
-                    </figure><!-- /.portfolio-image -->
                     <footer class="github-meta">
-                        <h5>CakeStrap</h5>
-                        <span class="github-subtitle">Twitter Bootstrap for CakePHP</span><!-- /.github-subtitle -->
+                        <h5>BackEndCoder/<a href="http://github.com/<?php echo $repo['full_name']; ?>"><?php echo $repo['name']; ?></a></h5>
+                        <span><?php echo $repo['description']; ?></span>
                     </footer><!-- /.github-meta -->
-                </a>
             </article><!-- /.github-item -->
-            
-        
-            <article class="github-item col-xs-12 col-sm-4">
-                <a href="/github/ss-boilerplate/">
-                    <figure class="github-image">
-                            <img src="/assets/Uploads/_resampled/CroppedImage722722-silverstripe.png" alt="silverstripe">
-                        <span class="hover-icon"><i class="fa fa-plus-square-o"></i></span><!-- /.hover-icon -->
-                    </figure><!-- /.portfolio-image -->
-                    <footer class="github-meta">
-                        <h5>SS Boilerplate</h5>
-                        <span class="github-subtitle">Theme for Silverstripe</span><!-- /.github-subtitle -->
-                    </footer><!-- /.github-meta -->
-                </a>
-            </article><!-- /.github-item -->
-            
-        
-            <article class="github-item col-xs-12 col-sm-4">
-                <a href="/github/php-template/">
-                    <figure class="github-image">
-                            <img src="/assets/Uploads/_resampled/CroppedImage722722-html.png" alt="html">
-                        <span class="hover-icon"><i class="fa fa-plus-square-o"></i></span><!-- /.hover-icon -->
-                    </figure><!-- /.portfolio-image -->
-                    <footer class="github-meta">
-                        <h5>PHP Template</h5>
-                        <span class="github-subtitle">Rapid development boilerplate</span><!-- /.github-subtitle -->
-                    </footer><!-- /.github-meta -->
-                </a>
-            </article><!-- /.github-item -->
-            
-                <div class="clearfix"></div><!-- /.clearfix -->
-            
-        
-            <article class="github-item col-xs-12 col-sm-4">
-                <a href="/github/quote-in-a-minute/">
-                    <figure class="github-image">
-                            <img src="/assets/Uploads/quote.jpg" alt="quote">
-                        <span class="hover-icon"><i class="fa fa-plus-square-o"></i></span><!-- /.hover-icon -->
-                    </figure><!-- /.portfolio-image -->
-                    <footer class="github-meta">
-                        <h5>Quote in a Minute</h5>
-                        <span class="github-subtitle">Generate quotes/invoices in a minute</span><!-- /.github-subtitle -->
-                    </footer><!-- /.github-meta -->
-                </a>
-            </article><!-- /.github-item -->
-            
-        
-    </div>
+<?php
+endforeach;
+?>        
+</div>
